@@ -15,8 +15,8 @@ public class Event {
     private String description;
     private double popularityScore;
 
-    @ManyToOne()
-    private Location location;
+    @ManyToOne
+     private Location location;
 
     boolean liked;
 
@@ -30,16 +30,8 @@ public class Event {
         return liked;
     }
     public void like(){
-        this.popularityScore+=5;
+        this.popularityScore+=10;
         liked = false;
     }
-
-    /*public Event(String name, String description, double popularityScore) {
-        this.id = (long) (Math.random() * 1000);
-        this.name = name;
-        this.description = description;
-        this.popularityScore = popularityScore;
-    }*/
-
 
 }

@@ -25,12 +25,12 @@ public class BookingConfirmationController {
 
     @GetMapping("/event/BookingConfirmation")
     public String bookingConfirmation(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        EventBooking tmp = DataHolder.bookings.get(DataHolder.bookings.size()-1);
+        /*EventBooking tmp = DataHolder.bookings.get(DataHolder.bookings.size()-1);
         request.setAttribute("num_tickets", tmp.getNumberOfTickets());
         request.setAttribute("event_name", tmp.getEventName());
         request.setAttribute("client_ip", tmp.getAttendeeAddress());
         request.setAttribute("attende_name", tmp.getAttendeeName());
-        request.setAttribute("Bookings", DataHolder.bookings);
+        request.setAttribute("Bookings", DataHolder.bookings);*/
         return "bookingConfirmation";
     }
 }

@@ -35,12 +35,12 @@ public class BookingConfirmationServlet extends HttpServlet {
                 .buildApplication(getServletContext())
                 .buildExchange(req, resp);
         WebContext context = new WebContext(webExchange);
-        EventBooking tmp = DataHolder.bookings.get(DataHolder.bookings.size()-1);
+        /*EventBooking tmp = DataHolder.bookings.get(DataHolder.bookings.size()-1);
         context.setVariable("attende_name",tmp.getAttendeeName());
         context.setVariable("client_ip",tmp.getAttendeeAddress());
         context.setVariable("event_name",tmp.getEventName());
         context.setVariable("num_tickets",tmp.getNumberOfTickets());
-        context.setVariable("Bookings",DataHolder.bookings);
+        context.setVariable("Bookings",DataHolder.bookings);*/
         this.engine.process("bookingConfirmation.html",context,resp.getWriter());
     }
 

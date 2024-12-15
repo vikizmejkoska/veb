@@ -11,24 +11,29 @@ import java.util.stream.Collectors;
 @Repository
 public class InMemoryEventRepository {
     public List<Event> findAll(){
-        return DataHolder.events;
+        return null;
+        //return DataHolder.events;
     }
     public List<Event> searchEvents(String text){
-        return DataHolder.events.stream().filter(i->i.getName().contains(text) || i.getDescription().contains(text)).collect(Collectors.toList());
+       // return DataHolder.events.stream().filter(i->i.getName().contains(text) || i.getDescription().contains(text)).collect(Collectors.toList());
+    return null;
     }
     public List<Event> specialSearch(String text,double rating){
-        return DataHolder.events.stream().filter(i->i.getName().contains(text) || i.getPopularityScore()>=rating).collect(Collectors.toList());
+        //return DataHolder.events.stream().filter(i->i.getName().contains(text) || i.getPopularityScore()>=rating).collect(Collectors.toList());
+    return null;
     }
     public Optional<Event> find_by_ID(long id){
-        return DataHolder.events.stream().filter(i->i.getId()==id).findFirst();
+        //return DataHolder.events.stream().filter(i->i.getId()==id).findFirst();
+        return null;
     }
     public Optional<Event> save(Event e){
-        DataHolder.events.removeIf(i->i.getName().equals(e.getName()));
-        DataHolder.events.add(e);
-        return Optional.of(e);
+       // DataHolder.events.removeIf(i->i.getName().equals(e.getName()));
+       // DataHolder.events.add(e);
+       // return Optional.of(e);
+        return null;
     }
     public void delete(long ID){
-        DataHolder.events.removeIf(i->i.getId()==ID);
+        //DataHolder.events.removeIf(i->i.getId()==ID);
     }
     public void like(Event e){
         e.like();

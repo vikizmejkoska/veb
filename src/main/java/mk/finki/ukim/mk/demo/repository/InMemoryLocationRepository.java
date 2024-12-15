@@ -10,9 +10,11 @@ import java.util.Optional;
 @Repository
 public class InMemoryLocationRepository {
     public List<Location> findAll(){
-        return DataHolder.locations.stream().toList();
+        //return DataHolder.locations.stream().toList();
+        return null;
     }
     public Optional<Location> find_by_ID(long id){
-        return DataHolder.locations.stream().filter(i->i.getId().equals(id)).findFirst();
+        //return DataHolder.locations.stream().filter(i->i.getId().equals(id)).findFirst();
+        return null;
     }
 }
